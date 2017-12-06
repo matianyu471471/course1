@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #div1{
+            float: left;
+            position: relative;
+        }
+        #div2{
+            background: cornsilk;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            top:0;
+            opacity:0.6;
+            filter: alpha(opacity=60);
+            display: none;
+        }
+        #div3{
+            width: 400px;
+            height: 400px;
+            float: left;
+            overflow: hidden;
+            display: none;
+            position: relative;
+        }
+        #div3 img{
+            position: absolute;
+            left: 0;
+            top: 0;
+
+
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+    <img src="1.jpg" alt="">
+    <div id="div2"></div>
+</div>
+<div id="div3">
+    <img src="2.jpg" alt="" id="tu">
+</div>
+<script>
+        var  oDiv1=document.getElementById("div1")
+        var  oDiv2=document.getElementById("div2")
+        var  oDiv3=document.getElementById("div3")
+        var  otu=document.getElementById("tu")
+        oDiv1.onmouseover=function () {
+            oDiv2.style.display="block";
+            oDiv3.style.display="block";
+
+        };
+        oDiv1.onmouseout=function () {
+            oDiv2.style.display="none";
+            oDiv3.style.display="none";
+        };
+        oDiv1.onmousemove = function(e) {
+            e = e || window.event;
+            var top = e.clientY - oDiv2.offsetHeight / 2;
+            var left = e.clientX - oDiv2.offsetWidth / 2;
+            if (left < 0) {
+                left = 0;
+            }
+            if (top < 0) {
+                top = 0;
+            }
+            var xMax = oDiv1.offsetWidth - oDiv2.offsetWidth;
+            if (left > xMax) {
+                left = xMax;
+            }
+            var yMax = oDiv1.offsetHeight - oDiv2.offsetHeight;
+            if (top > yMax) {
+                top = yMax;
+            }
+            oDiv2.style.top  = top + "px";
+            oDiv2.style.left = left + "px";
+
+            var fScaleX = left / xMax;
+            var fScaleY = top / yMax;
+            otu.style.top = -fScaleY * (otu.offsetHeight - oDiv3.offsetHeight) + "px";
+            otu.style.left = -fScaleX * (otu.offsetWidth - oDiv3.offsetWidth) + "px";
+        }
+</script>
+
+</body>
+</html>
