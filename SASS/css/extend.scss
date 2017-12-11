@@ -1,0 +1,11 @@
+div{
+  color: red;
+  font-size: 34px;
+  a{
+    text-decoration: none;
+  }
+}
+p{
+  @extend  div;
+  background-color:blue;
+}

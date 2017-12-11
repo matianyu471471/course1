@@ -1,0 +1,10 @@
+$test:".test";
+$font:'font';
+#{$test+ 1}{
+  color: #c3c3c3;
+  #{$font+ "-size"}:20px;
+}
+body{
+  color: #00b51d;
+  font-size: 12px;
+}
