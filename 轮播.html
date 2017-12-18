@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+     #div1{
+         width: 680px;
+         height: 344px;
+         background: chocolate;
+         margin: 50px auto;
+         position: relative;
+     }
+        #table{
+            position: absolute;
+            right:10px;
+            bottom: 10px;
+
+          }
+        #table li{
+            float: left;
+            margin-left: 5px;
+            height: 20px;
+            width: 20px;
+            text-align: center;
+            background: black;
+            color: #edf4ed;
+        }
+        #imgs img{
+            display: none;
+        }
+        #imgs .selected{
+            display: block;
+        }
+        .arrow{
+          position: absolute;
+            left:10px;
+            bottom: 10px;
+        }
+        .arrow span{
+            color:white ;
+            background: black
+
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="div1">
+    <ul id="table">
+        <li class="selected">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <div id="imgs">
+        <img class="selected"src="imge/1.jpg" alt="">
+        <img src="imge/2.jpg" alt="">
+       <img src="imge/3.jpg" alt="">
+        <img src="imge/4.jpg" alt="">
+    </div>
+    <div class="arrow">
+        <span class="prev">&lt;</span>
+        <span class="next">&gt;</span>
+
+    </div>
+</div>
+<script>
+    var odiv1=document.getElementById("div1");
+    var otable=odiv1.getElementById("table");
+    var oimgs=odiv1.getElementById("imgs");
+    var ali=otable.children;
+    var aimg=oimgs.children;
+    var oprev=odiv1.getElementById("prev");
+    var onext=odiv1.getElementById("next");
+    var index=0;
+    for(var i=0,;i<ali.length;i++)
+    {
+        ali[i]
+    }
+
+</script>
+</body>
+</html>
