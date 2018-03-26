@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .aa{
+            background: #ff0000;
+        }
+       /* #div1{
+            font-size: 30px;
+            background: #ff0000;
+        }*/
+    </style>
+</head>
+<body>
+    <div id="div1" class="bb">div1</div>
+    <input type="text" value="张三" id="username">
+
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        /*var oDiv1 = document.getElementById("div1");
+        oDiv1.index = 5;
+        console.log(oDiv1.index);
+
+        oDiv1.setAttribute("aa", "123");
+        console.log(oDiv1.getAttribute("aa"));*/
+        $(function(){
+            var $div1 = $("#div1");
+
+            /*$div1.attr("aa", "123");
+            console.log($div1.attr("aa"));
+            $div1.removeAttr("aa");
+
+            $div1.prop("bb", "234");
+            console.log($div1.prop("bb"));
+            $div1.removeProp("bb");
+
+
+            var oUsername = document.getElementById("username");
+            console.log(oUsername.getAttribute("value"));
+
+            $("#username").val("李四");*/
+
+            /*var oDiv1 = document.getElementById("div1");
+            oDiv1.className += " aa ";*/
+//            $div1.addClass("aa");
+//            $div1.css("background", "#f00").css("color", "#fff").addClass("aa");
+            /*$div1.css({
+                background : "#f00",
+                border : "10px solid #000",
+                fontSize : "30px",
+            });*/
+           /* $div1.css("width", function(){
+                var a = 200;
+                return a + 100;
+            });*/
+//            $div1.hasClass("bb");
+//            $div1.removeClass("bb");
+            /*$div1.on("click", function(){
+                $div1.toggleClass("aa");
+            });*/
+
+
+        });
+
+    </script>
+</body>
+</html>
