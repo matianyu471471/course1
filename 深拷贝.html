@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var obj1 ={
+        name:"zhangsan",
+        age:"18"
+
+    }
+    var obj2 =copy(obj1);
+    obj1.name="lisi";
+    console.log(obj2.name)
+    function copy(obj) {
+        var newobj={};
+        for (var p in obj){
+          newobj[p]=obj[p]
+        };
+        return newobj;
+    }
+</script>
+</html>
